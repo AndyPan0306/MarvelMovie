@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8hK-u8-Pff">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--關於漫威-->
+        <scene sceneID="brB-ln-LIm">
+            <objects>
+                <tableViewController id="TC4-Nr-irl" customClass="AboutTableViewController" customModule="MarvelMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v6Q-Ks-bdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.76028174159999995" green="0.16207268829999999" blue="0.1489575803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="UYe-vL-jCm">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Marvel" translatesAutoresizingMaskIntoConstraints="NO" id="BXq-YF-bZi">
+                                    <rect key="frame" x="100" y="14" width="174" height="92"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="174" id="WUk-X4-rQm"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.76028174159999995" green="0.16207268829999999" blue="0.1489575803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="BXq-YF-bZi" firstAttribute="top" secondItem="UYe-vL-jCm" secondAttribute="top" constant="14" id="1KS-FY-Fwi"/>
+                                <constraint firstItem="BXq-YF-bZi" firstAttribute="centerY" secondItem="UYe-vL-jCm" secondAttribute="centerY" id="KWR-Qx-qhp"/>
+                                <constraint firstItem="BXq-YF-bZi" firstAttribute="centerX" secondItem="UYe-vL-jCm" secondAttribute="centerX" id="eEi-y2-8Hd"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutCell" textLabel="OSf-bo-fCp" style="IBUITableViewCellStyleDefault" id="TNu-aQ-Ihm">
+                                <rect key="frame" x="0.0" y="148" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TNu-aQ-Ihm" id="LYp-RX-cPR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OSf-bo-fCp">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TC4-Nr-irl" id="0ea-fQ-c7R"/>
+                            <outlet property="delegate" destination="TC4-Nr-irl" id="DMH-XX-1kF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="關於漫威" id="hT4-eL-ZWq"/>
+                    <connections>
+                        <segue destination="vL5-bX-Old" kind="show" identifier="showWebView" id="rL0-Pf-3Y7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7K-jC-q1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-3574"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="eGz-cE-rz1">
+            <objects>
+                <viewController id="vL5-bX-Old" customClass="WebViewController" customModule="MarvelMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WeR-yw-dow">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sJ-wc-2zA">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2F6-Yc-EL8" firstAttribute="bottom" secondItem="7sJ-wc-2zA" secondAttribute="bottom" id="5iN-o7-NaX"/>
+                            <constraint firstItem="7sJ-wc-2zA" firstAttribute="leading" secondItem="2F6-Yc-EL8" secondAttribute="leading" id="TUc-nH-9YP"/>
+                            <constraint firstItem="7sJ-wc-2zA" firstAttribute="top" secondItem="WeR-yw-dow" secondAttribute="top" constant="88" id="TmS-Rj-bfU"/>
+                            <constraint firstItem="2F6-Yc-EL8" firstAttribute="trailing" secondItem="7sJ-wc-2zA" secondAttribute="trailing" id="wPn-Nc-8PA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2F6-Yc-EL8"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="7sJ-wc-2zA" id="NpD-dU-8k1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ch0-IQ-Oe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="-3574"/>
+        </scene>
+        <!--關於漫威-->
+        <scene sceneID="uaE-dj-Txg">
+            <objects>
+                <navigationController storyboardIdentifier="AboutView" automaticallyAdjustsScrollViewInsets="NO" id="8hK-u8-Pff" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="關於漫威" image="about" id="F3J-qe-VFf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o2l-Fo-2Us">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TC4-Nr-irl" kind="relationship" relationship="rootViewController" id="Hsj-oc-cp9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LpE-zw-dXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="-3574"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Marvel" width="854" height="400"/>
+        <image name="about" width="23" height="21"/>
+    </resources>
+</document>

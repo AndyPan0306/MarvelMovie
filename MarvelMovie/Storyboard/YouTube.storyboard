@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ig-Pl-ZGa">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--近期強檔-->
+        <scene sceneID="Oat-tc-k8k">
+            <objects>
+                <viewController id="UqJ-jH-yb3" customClass="YouTubeViewController" customModule="MarvelMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qvE-0Y-FpY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-a6-V7q">
+                                <rect key="frame" x="0.0" y="88" width="375" height="230"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="Spv-1w-orG"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SrW-5q-qEy">
+                                <rect key="frame" x="169" y="185" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fpr-GV-afl">
+                                <rect key="frame" x="18" y="358" width="334" height="408"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fea-0H-Igd">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MarvelTWIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xtL-PH-LFc">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="0EH-s5-caW"/>
+                                                    <constraint firstAttribute="height" constant="50" id="qOU-r6-qRh"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xiP-Ha-eGP">
+                                                <rect key="frame" x="55" y="0.0" width="279" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【復仇者聯盟3：無限之戰】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKA-4L-JnY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="193" height="27"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="27" id="kbv-Md-0SL"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="官方前導預告 2018年 4月25日 末日降臨 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-Pz-gFw">
+                                                        <rect key="frame" x="0.0" y="32" width="276.33333333333331" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zqx-xA-WFz">
+                                        <rect key="frame" x="0.0" y="55" width="334" height="353"/>
+                                        <color key="backgroundColor" red="0.76028174159999995" green="0.16207268829999999" blue="0.1489575803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <string key="text">導演：安東尼及喬羅素
+
+製作人：凱文費奇
+
+演員卡司：小勞勃道尼、克里斯伊凡、克里斯漢斯沃、克里斯普瑞特、史嘉蕾喬韓森、馬克魯法洛、安東尼麥基、傑瑞米雷納、伊莉莎白歐森、保羅貝特尼、班尼迪克康柏拜區、查維克博斯曼、湯姆霍蘭德、喬許布洛林、賽巴斯汀史坦、湯姆希德斯頓、唐奇鐸…等
+ 
+劇情簡介：一部集漫威電影宇宙10年之大成的宏偉鉅作，【復仇者聯盟3：無限之戰】將帶來前所未見，最極致、最致命的存亡對決。復仇者聯盟和他們的超級英雄盟友們必須要不顧一切攜手合作才有可能組止最強的終極反派薩諾斯將整個宇宙毀滅。
+
+台灣漫威粉絲頁：
+https://www.facebook.com/MarvelStudioTaiwan/</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="url"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76028174159999995" green="0.16207268829999999" blue="0.1489575803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fpr-GV-afl" firstAttribute="top" secondItem="hr8-a6-V7q" secondAttribute="bottom" constant="40" id="AoU-an-KwT"/>
+                            <constraint firstItem="SrW-5q-qEy" firstAttribute="centerX" secondItem="hr8-a6-V7q" secondAttribute="centerX" id="KNv-21-7lE"/>
+                            <constraint firstAttribute="trailing" secondItem="hr8-a6-V7q" secondAttribute="trailing" id="Non-U0-ixW"/>
+                            <constraint firstItem="hr8-a6-V7q" firstAttribute="top" secondItem="I0V-5W-RaG" secondAttribute="top" id="SQi-t4-8da"/>
+                            <constraint firstItem="hr8-a6-V7q" firstAttribute="leading" secondItem="qvE-0Y-FpY" secondAttribute="leading" id="ixA-0J-QVr"/>
+                            <constraint firstItem="fpr-GV-afl" firstAttribute="leading" secondItem="I0V-5W-RaG" secondAttribute="leading" constant="18" id="jHc-nX-N1x"/>
+                            <constraint firstItem="I0V-5W-RaG" firstAttribute="bottom" secondItem="fpr-GV-afl" secondAttribute="bottom" constant="12" id="pVh-Y7-Cma"/>
+                            <constraint firstItem="SrW-5q-qEy" firstAttribute="centerY" secondItem="hr8-a6-V7q" secondAttribute="centerY" id="vt0-kT-eBa"/>
+                            <constraint firstItem="I0V-5W-RaG" firstAttribute="trailing" secondItem="fpr-GV-afl" secondAttribute="trailing" constant="23" id="ytj-jQ-AWT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I0V-5W-RaG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="近期強檔" id="Y3k-Q0-RmA"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="SrW-5q-qEy" id="hU3-qz-mxI"/>
+                        <outlet property="youTube" destination="hr8-a6-V7q" id="Zm4-FQ-6kN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgB-mp-yjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="-3064"/>
+        </scene>
+        <!--近期強檔-->
+        <scene sceneID="DRK-7c-TDi">
+            <objects>
+                <navigationController storyboardIdentifier="YouTubeView" automaticallyAdjustsScrollViewInsets="NO" id="7ig-Pl-ZGa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="近期強檔" image="YouTubeIcon" id="llz-TL-iM9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9r2-dO-lV3">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UqJ-jH-yb3" kind="relationship" relationship="rootViewController" id="x4a-c6-ryz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vuX-kX-RYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="-3064"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MarvelTWIcon" width="288" height="288"/>
+        <image name="YouTubeIcon" width="30" height="30"/>
+    </resources>
+</document>
