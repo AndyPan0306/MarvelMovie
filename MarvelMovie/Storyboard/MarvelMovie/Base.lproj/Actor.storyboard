@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z4k-f6-QkN">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--角色介紹-->
+        <scene sceneID="1YB-r4-m4V">
+            <objects>
+                <tableViewController id="VCX-hl-Hf2" customClass="ActorTableViewController" customModule="MarvelMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dZn-53-Z4L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.76028174159999995" green="0.16207268829999999" blue="0.1489575803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ActorCell" rowHeight="160" id="EPO-6x-Gr1" customClass="ActorTableViewCell" customModule="MarvelMovie" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="160"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EPO-6x-Gr1" id="9D5-1G-aFP">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="159.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QbZ-Fv-ea9">
+                                            <rect key="frame" x="22" y="13" width="311" height="134.66666666666666"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWq-7g-RoV">
+                                                    <rect key="frame" x="0.0" y="7.3333333333333286" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="9vN-z5-JtW"/>
+                                                        <constraint firstAttribute="height" constant="120" id="qf1-Vf-tgi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Wm-zh-7kt">
+                                                    <rect key="frame" x="135" y="47.666666666666657" width="176" height="39.333333333333343"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IronMan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bI-zO-Yzl">
+                                                            <rect key="frame" x="55.33333333333335" y="0.0" width="65.666666666666686" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActorName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuj-cZ-vNN">
+                                                            <rect key="frame" x="49.333333333333336" y="21.333333333333336" width="77.333333333333314" height="18"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QbZ-Fv-ea9" secondAttribute="trailing" id="czr-q7-q1q"/>
+                                        <constraint firstItem="QbZ-Fv-ea9" firstAttribute="leading" secondItem="9D5-1G-aFP" secondAttribute="leadingMargin" constant="6" id="gLQ-of-Ye8"/>
+                                        <constraint firstItem="QbZ-Fv-ea9" firstAttribute="top" secondItem="9D5-1G-aFP" secondAttribute="topMargin" constant="2" id="gdE-Li-hJv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QbZ-Fv-ea9" secondAttribute="bottom" constant="1.5" id="lRt-Kh-wyn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="actorImage" destination="lWq-7g-RoV" id="Yl9-Mn-jPX"/>
+                                    <outlet property="actorNameLabel" destination="zuj-cZ-vNN" id="ygh-5S-IE4"/>
+                                    <outlet property="roleNameLabel" destination="3bI-zO-Yzl" id="wTV-07-lAQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VCX-hl-Hf2" id="pkr-az-qWT"/>
+                            <outlet property="delegate" destination="VCX-hl-Hf2" id="add-9p-Rcg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="角色介紹" id="hTr-ly-6jg"/>
+                    <connections>
+                        <segue destination="wJf-tk-mDG" kind="show" identifier="showWebView" id="21z-Ow-tIx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ui-pk-T5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.5999999999999" y="-3533.497536945813"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ueu-cM-DVp">
+            <objects>
+                <viewController id="wJf-tk-mDG" customClass="WebViewController" customModule="MarvelMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yQ-sO-CRW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oge-IU-LHS">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oge-IU-LHS" firstAttribute="leading" secondItem="4yQ-sO-CRW" secondAttribute="leading" id="6Fv-PQ-wIy"/>
+                            <constraint firstItem="Oge-IU-LHS" firstAttribute="bottom" secondItem="zye-NT-6fe" secondAttribute="bottom" id="UNN-Ns-mLQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Oge-IU-LHS" secondAttribute="trailing" id="WjB-B2-jrG"/>
+                            <constraint firstItem="Oge-IU-LHS" firstAttribute="top" secondItem="zye-NT-6fe" secondAttribute="top" id="pmV-mN-vlC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zye-NT-6fe"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Oge-IU-LHS" id="dJy-I9-dMr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tf8-oa-nAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="-3533"/>
+        </scene>
+        <!--角色介紹-->
+        <scene sceneID="2Rm-FS-L9H">
+            <objects>
+                <navigationController storyboardIdentifier="ActorView" automaticallyAdjustsScrollViewInsets="NO" id="Z4k-f6-QkN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="角色介紹" image="ActorIcon" id="g9s-zx-IsD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5yH-1Y-Jx3">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VCX-hl-Hf2" kind="relationship" relationship="rootViewController" id="F4L-vA-Crt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QkB-QQ-atc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="-3533"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ActorIcon" width="29" height="30"/>
+    </resources>
+</document>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bV0-Fp-uaA">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--電影系列-->
+        <scene sceneID="qys-qz-q4O">
+            <objects>
+                <tableViewController id="jfA-3A-xFC" customClass="MovieTableViewController" customModule="MarvelMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ieX-ge-w7C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.76028174159999995" green="0.16207268829999999" blue="0.1489575803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="185" id="UJx-tt-9jv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UJx-tt-9jv" id="q5k-Pa-K88">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="184.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm9-qb-ibG">
+                                            <rect key="frame" x="205" y="82" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITb-jA-HiQ">
+                                            <rect key="frame" x="16" y="11" width="143" height="163"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jfA-3A-xFC" id="LOc-Ue-RLc"/>
+                            <outlet property="delegate" destination="jfA-3A-xFC" id="Dil-Iv-VgL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="電影系列" id="XoM-w5-qQ4"/>
+                    <connections>
+                        <segue destination="Ywv-AY-iRQ" kind="show" identifier="showWebView" id="6NX-fL-df2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DxS-Jf-Xky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="-3662.807881773399"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="h4y-07-s4J">
+            <objects>
+                <viewController id="Ywv-AY-iRQ" customClass="WebViewController" customModule="MarvelMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mSi-YN-vFj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5j-yn-Tcm">
+                                <rect key="frame" x="0.0" y="90" width="375" height="688"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p5j-yn-Tcm" firstAttribute="top" secondItem="Cuq-Dh-tns" secondAttribute="top" constant="2" id="dTQ-yP-ULl"/>
+                            <constraint firstItem="p5j-yn-Tcm" firstAttribute="bottom" secondItem="Cuq-Dh-tns" secondAttribute="bottom" id="gYH-4R-R4M"/>
+                            <constraint firstAttribute="trailing" secondItem="p5j-yn-Tcm" secondAttribute="trailing" id="pf5-P9-Wjc"/>
+                            <constraint firstItem="p5j-yn-Tcm" firstAttribute="leading" secondItem="mSi-YN-vFj" secondAttribute="leading" id="qMr-Wj-XLw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cuq-Dh-tns"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="p5j-yn-Tcm" id="cxG-6Q-oQT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzg-zz-JFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602.4000000000001" y="-3662.807881773399"/>
+        </scene>
+        <!--電影系列-->
+        <scene sceneID="vH4-CU-5CE">
+            <objects>
+                <navigationController storyboardIdentifier="MovieView" automaticallyAdjustsScrollViewInsets="NO" id="bV0-Fp-uaA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="電影系列" image="電影Icon" id="A0W-f6-stO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w4l-J7-RUX">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jfA-3A-xFC" kind="relationship" relationship="rootViewController" id="eDd-5g-wdY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXZ-zv-5iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094.4000000000001" y="-3662.0689655172414"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="電影Icon" width="30" height="30"/>
+    </resources>
+</document>
