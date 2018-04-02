@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		397714EB206F9D490032E76F /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397714E9206F9D490032E76F /* Movie.storyboard */; };
 		397714ED206FB20C0032E76F /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397714EC206FB20C0032E76F /* MovieTableViewController.swift */; };
+		3980F0B020724DFF008E30DD /* Actor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3980F0AF20724DFF008E30DD /* Actor.storyboard */; };
+		3980F0B220724E51008E30DD /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3980F0B120724E51008E30DD /* Movie.storyboard */; };
 		39867938206E243400151B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39867937206E243400151B20 /* Assets.xcassets */; };
 		3986793A206E463D00151B20 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39867939206E463D00151B20 /* AboutTableViewController.swift */; };
 		3986793C206E468500151B20 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3986793B206E468500151B20 /* About.storyboard */; };
 		39867943206E5CFA00151B20 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39867942206E5CFA00151B20 /* WebViewController.swift */; };
 		39867946206E797D00151B20 /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39867945206E797D00151B20 /* ActorTableViewCell.swift */; };
-		39867949206E79A800151B20 /* Actor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39867947206E79A800151B20 /* Actor.storyboard */; };
 		3986794B206E7C7300151B20 /* ActorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986794A206E7C7300151B20 /* ActorTableViewController.swift */; };
 		39B027F0206CEBC8000A67F4 /* YouTube.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B027EF206CEBC8000A67F4 /* YouTube.storyboard */; };
 		39EC20D2205FDA7600F45F71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC20D1205FDA7600F45F71 /* AppDelegate.swift */; };
@@ -26,14 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		397714EA206F9D490032E76F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MarvelMovie/Base.lproj/Movie.storyboard; sourceTree = "<group>"; };
 		397714EC206FB20C0032E76F /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		3980F0AF20724DFF008E30DD /* Actor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Actor.storyboard; sourceTree = "<group>"; };
+		3980F0B120724E51008E30DD /* Movie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		39867937206E243400151B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39867939206E463D00151B20 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		3986793B206E468500151B20 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		39867942206E5CFA00151B20 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		39867945206E797D00151B20 /* ActorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
-		39867948206E79A800151B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MarvelMovie/Base.lproj/Actor.storyboard; sourceTree = "<group>"; };
 		3986794A206E7C7300151B20 /* ActorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewController.swift; sourceTree = "<group>"; };
 		39B027EF206CEBC8000A67F4 /* YouTube.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouTube.storyboard; sourceTree = "<group>"; };
 		39EC20CE205FDA7600F45F71 /* MarvelMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,8 +75,8 @@
 		39B027EC206CE223000A67F4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				397714E9206F9D490032E76F /* Movie.storyboard */,
-				39867947206E79A800151B20 /* Actor.storyboard */,
+				3980F0B120724E51008E30DD /* Movie.storyboard */,
+				3980F0AF20724DFF008E30DD /* Actor.storyboard */,
 				3986793B206E468500151B20 /* About.storyboard */,
 				39B027EF206CEBC8000A67F4 /* YouTube.storyboard */,
 			);
@@ -172,13 +172,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3980F0B020724DFF008E30DD /* Actor.storyboard in Resources */,
 				39EC20DC205FDA7600F45F71 /* LaunchScreen.storyboard in Resources */,
-				397714EB206F9D490032E76F /* Movie.storyboard in Resources */,
 				3986793C206E468500151B20 /* About.storyboard in Resources */,
 				39B027F0206CEBC8000A67F4 /* YouTube.storyboard in Resources */,
 				39EC20D7205FDA7600F45F71 /* Main.storyboard in Resources */,
-				39867949206E79A800151B20 /* Actor.storyboard in Resources */,
 				39867938206E243400151B20 /* Assets.xcassets in Resources */,
+				3980F0B220724E51008E30DD /* Movie.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,22 +204,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		397714E9206F9D490032E76F /* Movie.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				397714EA206F9D490032E76F /* Base */,
-			);
-			name = Movie.storyboard;
-			sourceTree = "<group>";
-		};
-		39867947206E79A800151B20 /* Actor.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39867948206E79A800151B20 /* Base */,
-			);
-			name = Actor.storyboard;
-			sourceTree = "<group>";
-		};
 		39EC20D5205FDA7600F45F71 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
